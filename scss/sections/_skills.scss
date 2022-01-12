@@ -1,0 +1,107 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.skills{
+    margin-top: 80rem;
+
+    @include media-breakpoint-up(md){
+        margin-top: 10rem;
+    }
+
+    @include media-breakpoint-up(lg){
+        margin-top: -3rem;
+    }
+ 
+    @include media-breakpoint-up(xl){
+        margin-top: -3rem;
+    }
+
+    img{
+        width:50px;
+        height:50px;
+    }
+    .skill-img{
+        width:80px;
+        height:80px;
+
+        @include media-breakpoint-down(sm){
+            width:60px;
+            height:60px;
+
+          }
+    }
+
+   h1{
+    @include media-breakpoint-down(sm){
+        font-size: 1.5rem !important;
+      }
+
+      @include media-breakpoint-up(md){
+        font-size: 3rem !important;
+      }
+      
+      @include media-breakpoint-up(lg){
+        font-size: 2.5rem !important;
+      }
+
+        font-size: 2rem;
+        display: inline-block;
+        text-transform: uppercase;
+    //  background-clip: text !important;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+     // background-image: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-image: linear-gradient(to right top, #3dccc7, #53d2cf, #66d8d7, #77dddf, #87e3e6, #7edfd5, #7cdbc1, #81d5ab, #95be6b, #b59f35, #d47526, #e63946);
+   }
+
+   .bg-html{
+        // background-color: #E44D26;  /* fallback for old browsers */
+        background-color: #ff7816;  /* fallback for old browsers */
+   }
+   .bg-css{
+        background-color: #2196f3;
+    }
+    .bg-javascript{
+        background-color: #e0c600;
+    }
+    .bg-vue{
+        background-color:#4fc08d;
+    }
+
+    .bg-jquery{
+        background-color: #0868ac;
+    }
+    .bg-xd{
+        background-color: #da2286;
+    }
+
+    .bg-Ai{
+        background-color: #330000;
+    }
+
+    .bg-ps{
+        background-color: #001834;
+    }
+    .bg-laravel{
+        background-color: #ff2d20;
+    }
+    .between{
+        position: relative;
+       
+       // margin-top: 4rem;
+        margin-bottom: 1rem;
+
+        // @include media-breakpoint-up(sm) { 
+        //     margin-top:0rem; 
+        // }
+
+        
+        // @include media-breakpoint-up(md) { 
+        //     margin-top: -5rem;
+        // }
+
+        i{
+            color:gold;
+        }
+    }
+}

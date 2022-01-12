@@ -1,0 +1,59 @@
+//PULSE BORDER
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+/* 
+cursor animation
+*/
+
+.ml7 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3rem;
+
+  @media (max-width: 575.98px) { 
+    font-size: 1.8rem;
+  }
+
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ani-delay-1{
+  animation-delay: 0.5s;
+}
+.ani-delay-2{
+  animation-delay: 1s;
+}
+.ani-delay-3{
+  animation-delay: 1.5s;
+}
+.ani-delay-4{
+  animation-delay: 2s;
+}
+.ani-delay-5{
+  animation-delay: 2.5s;
+}
+
+@keyframes toShow {
+  from{
+
+      transform: translateY(-200px);
+
+  }to{
+
+  transform: translateY(0);
+
+      }
+}

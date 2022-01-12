@@ -1,0 +1,78 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+
+.relative-position{
+    @include media-breakpoint-up(lg){
+       position:  relative !important;
+    }
+}
+.absolute-position{
+    @include media-breakpoint-up(lg){
+        position:  absolute !important;
+        top: 0;
+        left: 0;
+     }
+}
+
+.dark-mode{
+    #home,#header{
+       background-color: $gray-900 !important;
+
+       .letters{
+           color:#ff2d20 !important;
+       }
+    }
+
+    background-color: $gray-900 !important;
+    color:$white !important;
+
+    .card{
+        background-color: black !important;
+    }
+    li a{
+        color:$white !important;
+    }
+
+    .box{
+        background-color: $white !important;
+    }
+    .testimonials{
+        color:$white !important;
+       
+        .testimonials-role{
+            &__card{
+                p{
+                    color:$white !important;
+                }
+            }
+        }
+        .testimonials-role{
+            background-color: $black !important;
+        }
+        svg{
+            display: none !important;
+        }
+    }
+
+    .skills{
+        .between{
+            h2,h6{
+                color:$white !important;
+            }
+        }
+    }
+
+    .projects{
+        figcaption{
+            background-color: black !important;
+        }
+    }
+
+    .footer {
+        background-image: none;
+        .card{
+            color:white !important;
+        }
+    }
+}

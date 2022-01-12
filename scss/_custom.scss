@@ -1,0 +1,44 @@
+// IMPORT Bootstrap 5
+
+//MY THEME COLOR
+$doger-dark:  #3dccc7;
+$doger-light:  #9ceaef;
+$laracolor:#ff2d20;
+$border-radius:15px;
+
+//CUSTOM WHITE AND GRAY COLOR
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+
+$primary:       $doger-dark;
+$secondary:     $doger-light;
+$darkmode :     $black;
+$danger : $laracolor;
+$scale :         80px;
+$time:            1s;
+
+$card-border-radius:                $border-radius;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+
+
+$figcaption-bg:  $primary; // Green
+$text-color:     #9C3636; // Red
+
+
+@import "../assets/vendors/imagehover.css-master/scss/imagehover.scss";
+
+
+

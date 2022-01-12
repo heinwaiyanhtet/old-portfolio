@@ -1,0 +1,86 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+
+.home{
+    position: relative;
+    transition: all .5s ease;
+    &::before{
+    background-image: linear-gradient(to right top, #3dccc7, #53d2cf, #66d8d7, #77dddf, #87e3e6, #7edfd5, #7cdbc1, #81d5ab, #95be6b, #b59f35, #d47526, #e63946);
+    //background-image: linear-gradient(-45deg, #3dccc7, #2ac8d5, #2fc2e1, #46bce8, #62b4eb, #64b8ef, #67bbf4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+   //background-image: linear-gradient(to right top, #3dccc7, #53d2cf, #66d8d7, #77dddf, #87e3e6, #7edfd4, #7cd9bf, #81d3a9, #95ba6a, #b29a35, #ce7027, #dc3545);
+   //background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400% !important;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0rem;
+
+    // @include media-breakpoint-up(sm){
+    //     margin-top: -7.5rem;
+    // }
+    z-index: -1;
+    animation: gradient 4s ease infinite;
+
+    .autoplay{
+        img{
+            // width:100px;
+            // height: 100px;
+
+            @include media-breakpoint-down(sm) { 
+                margin-top: -30rem !important;
+             }
+        }
+    }
+}
+    .intro{
+        margin-top: 8rem;
+        margin-left:0rem !important;
+        
+        // @media (max-width: 575.98px) { 
+        //     margin-left:1rem !important;
+        // }
+        // &__hi{
+        //     margin-right: 25rem !important;
+        // }
+        // p{
+        //     margin-left: 7rem;
+        // }
+        @include media-breakpoint-down(sm) { 
+            #foot{
+                
+                .button-os{
+                    padding:.5rem !important;
+                    
+                    a{
+                        font-size: 0.5rem;
+                    }
+                    span{
+                        font-size: 1rem !important;
+                        width: 150px !important;
+                        height: 50px !important;
+                    }
+                }
+            }
+        }
+         
+    }
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

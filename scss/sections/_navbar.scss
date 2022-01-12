@@ -1,0 +1,191 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+    html{
+        scroll-behavior: smooth;
+    }
+
+    body{
+        font-family: 'Poppins', sans-serif;
+
+        .site-nav{
+          position: absolute;
+          top: 0;
+          z-index: 50;
+      }
+
+      .site-nav-scroll{
+          position: fixed !important;
+          top:0;
+          background-color: #ffffff;
+          box-shadow: 0 0 5px #00000020;
+          animation: toShow 1s linear;
+      }
+      
+        #header{
+
+            @include media-breakpoint-down(lg){
+              background-color: white;
+              position: fixed;
+              top:0rem;
+
+              .humburgarMenuContainer{
+                position: fixed;
+                top:0.7rem;
+              }
+            }
+            .nav-item{
+              @include media-breakpoint-down(lg){
+                  border: 2px solid $gray-300;
+                  border-radius: 10rem;
+                  margin-top: 1rem;
+                  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05) !important;
+
+                  .nav-link{
+                     color:#ff2d20 !important;
+                  }
+               }
+            }
+
+            .current-section{
+                @include media-breakpoint-down(lg){
+                  border: 2px solid $primary !important;
+                  border-radius: 10rem;
+              }
+            }
+          
+        }
+    }
+}
+
+
+
+/*  for navbar list*/
+.hideLine2{
+  opacity:0 !important;
+}
+
+.rotatePlus45deg{
+  transform: rotate(45deg)  translate(4px ,9px)
+}
+.rotateMinus45deg{
+  transform: rotate(-45deg) translate(4px,-9px);
+}
+.line1 ,
+.line2,
+.line3{
+  transition: all .5s ease;
+}
+
+
+.site-nav{
+  z-index: 50;
+  button{
+        .humburgarMenuContainer{
+          margin-top: 1.2rem;
+          display: none;
+
+          @include media-breakpoint-down(lg){
+            display: inline-block !important;
+          }
+
+          margin-right: 1rem;
+          position: absolute;
+          top:0px;
+          right:0px;
+          cursor: pointer;
+          z-index: 2002;
+         
+
+          .humburger{
+            width: 40px;
+            height:4px;
+            background-color: $danger;
+            margin:5px 0px;
+            border-radius: 5px;
+          }
+
+      }
+  }
+
+  .slider{
+    height:5px;
+    background-color: $danger;
+    transition: all .4s ease-in-out;
+  }
+
+  .nav-link{
+    padding: 0.5rem 1.3rem !important;
+  }
+
+  // .nav-link.current-section{
+  //   border: 2px solid white;
+  //   border-radius: 10em;
+  //   padding: 0.5rem 1.3rem !important;
+  // }
+}
+
+//  .left-text{
+//       position: absolute;
+//       text-align: start !important;        
+//       margin-left: 3rem;
+//       top:0 !important;
+// }
+
+/* For dark mode button*/
+.darkmode{
+        
+        // @include media-breakpoint-down(lg){
+        //   text-align: start!important;
+        //   margin-left: 1rem;
+        // }
+        
+        
+        @include media-breakpoint-up(lg){
+          text-align: end;
+          margin-left: 0rem;
+        }
+
+       
+       
+        &__button{
+            margin:10px 0px;
+        }
+
+        input[id="check"]{
+            display: none;
+        }
+
+
+        .box{
+                position: relative;
+                @include common(column, center,null ,$scale ,$scale/2 ,$gray-800);
+                border-radius: $scale/4;
+                cursor: pointer;
+            
+                .ball{
+                    position: absolute;
+                    @include common(null,null ,null ,$scale/2 ,$scale/2 ,null);
+                    background-color: $secondary;
+                    border-radius: 50%;
+                    border:3px solid black;
+                }
+                .scenary{
+                    @include common(row,space-between ,null ,null ,null,null );
+                    padding: 5px 10px 0px 5px;
+                    svg{
+                    width: $scale/3;
+                    fill:$primary;
+                    }
+                }
+            }
+}
+
+
+
+

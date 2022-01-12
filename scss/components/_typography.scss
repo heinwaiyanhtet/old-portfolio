@@ -1,0 +1,36 @@
+@use "../custom" as *;
+
+.heading-line::before{
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    margin:0 auto;
+    background-color: $primary;
+}
+
+.heading-line::after{
+    content: "";
+    width: 2rem;
+    padding-top: 0.5rem;
+    height: 0.2rem;
+    display: block;
+    margin:0 auto;
+    background-color: $primary;
+}
+
+.intro{
+    @include media-breakpoint-down(sm) { 
+        h1{
+            font-size: 1.5rem;
+        }
+        margin-top: 2rem !important;
+
+        h5{
+                font-size: 1rem;
+        }
+        
+     }
+    
+    
+}

@@ -1,0 +1,21 @@
+@use "custom";
+
+//IMPORT components
+@use "components/animations";
+@use "components/buttons";
+@use "components/mixins";
+@use "components/typography";
+
+
+//IMPORT sections
+@import "sections/home";
+@import "sections/testimonials";
+@import "sections/contact";
+@import "sections/navbar";
+@import "sections/skills";
+@import "sections/recentProject";
+@import "sections/footer";
+@import "sections/darkmode";
+
+//hover
+

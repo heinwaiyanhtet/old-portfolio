@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning bootstrap v5 with sass</title>
+    
+    <link rel="stylesheet" href="assets/vendors/VenoBox-master/dist/venobox.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/vendors/slick-vendor/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendors/imagehover.css-master/css/imagehover.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Padauk:wght@400;700&family=Poppins:wght@400;500;700;800;900&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="node_modules/animate.css/animate.min.css"> -->
+    <link rel="stylesheet" href="assets/vendors/WOW/css/libs/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      /* .card{
+        background-color: black !important;
+      } */
+    </style>
+</head>
+<body>
+<!-- NavBar Start -->
+<header class="container-fluid site-nav header" id="header">
+    <div class="row">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-12 px-0">
+                  <nav class="navbar navbar-expand-lg navbar-light header__nav">
+                    <div class="container-fluid">
+                   
+                        <button class="border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                            <div class="humburgarMenuContainer me-5">
+                                <div class="humburger line1"></div>
+                                <div class="humburger line2"></div>
+                                <div class="humburger line3"></div>
+                            </div>
+                      </button>
+
+                      <div class="collapse navbar-collapse justify-content-end mt-5 mt-md-0" id="navbarSupportedContent">
+                        <div>
+                          <div class="position-relative">
+                            <ul class="navbar-nav  mb-2 mb-lg-0 tabs" style="position: relative;">
+                              <li class="nav-item">
+                                <a class="nav-link fw-bold text-black active" href="#home">About</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link fw-bold text-black" href="#projects">projects</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link fw-bold text-black" href="#skills">Skills</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link fw-bold text-black" href="#testimonials">testimonial</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link fw-bold text-black" href="#footer">Contact</a>
+                              </li>
+                            </ul>
+                          </div>
+                          
+                          <div id="slider" class="slider d-none d-lg-block"></div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                  </nav>
+                  
+                </div>
+
+                <!-- dark mode start -->
+               
+                <div class="relative-position mt-1">
+                  <div class="darkmode absolute-position wow bounce">
+                    <div class="title">
+                        <div class="darkmode__button">
+                          <input type="checkbox" name="check" id="check">
+                          <label for="check">
+                            <div class="box">
+                              <div class="ball"></div>
+                               <div class="scenary">
+                                  <div class="moon">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  class="bi bi-moon-stars" viewBox="0 0 16 16">
+                                      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                                      <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+                                    </svg>
+                                  </div>
+                                  <div class="sun">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                                      <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                                    </svg>
+                                  </div>
+                               </div>   
+                            </div>
+                          </label>
+                        </div>
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="home w-100 vh-100 mt-5 mt-lg-0" id="home">
+  <div class="container">
+      <div class="row">
+      <div class=" col-12 col-xl-6">
+          <div class="intro wow slideInLeft ani-delay-1">
+              <h1>Hi , I'm</h1>
+              <h1 class="ml7 text-danger">
+                <span class="text-wrapper">
+                  <span class="letters text-nowrap"> Hein Wai Yan Htet</span>
+                </span>
+              </h1>
+              <h5 class="">
+                I'm a 17-year-old front-end web developer with 1 year experience 
+                I can help you with fantastic user interface 
+              </h5>
+              <div id="foot">
+                <button class="button-os">
+                  <a href="#">
+                <span> <a href="CV.pdf" target="_blank" download>Download CV</a> <i class="fas fa-download text-primary"></i></span>
+                  </a></button>
+              </div>
+          <!-- For Social App -->
+          <div class="social text-sm-start mt-5 mt-sm-0">
+            <div class="wrapper">
+              <div class="icon facebook">
+                <div class="tooltip">Facebook</div>
+                <span><i class="fab fa-facebook-f"></i></span>
+              </div>
+              <div class="icon twitter">
+                <div class="tooltip">Twitter</div>
+                <span><i class="fab fa-twitter"></i></span>
+              </div>
+              <div class="icon instagram">
+                <div class="tooltip">Instagram</div>
+                <span><i class="fab fa-instagram"></i></span>
+              </div>
+              <a href="https://github.com/heinwaiyanhtet" target="_blank">
+                <div class="icon github">
+                  <div class="tooltip">Github</div>
+                  <span><i class="fab fa-github"></i></span>
+                </div>
+              </a>
+              <a href="https://www.youtube.com/channel/UCVnY1nrJnefVItNqKDAaE0Q" >
+                <div class="icon youtube">
+                  <div class="tooltip">Youtube</div>
+                  <span><i class="fab fa-youtube"></i></span>
+                </div>
+              </a>
+            </div>
+          </div>
+        <!-- For social app end -->
+      </div>
+        
+      </div>
+      <div class=" col-12 col-xl-6 wow slideInRight">
+        <div class="autoplay">
+          <div class="mt-0 mt-sm-3">
+            <img src="./images/me/me1.png" class="rounded-circle mt-5 img-fluid mt-5" alt="">
+        </div>
+        <div class="mt-sm-5 mt-0">
+          <img src="./images/me/me2.png" class="rounded-circle mt-5 img-fluid mt-5" alt="">
+      </div>
+        </div>
+      </div>
+  </div>
+
+
+</section>
+
+<section id="projects" class="projects  w-100">
+      <div class="text-center wow flipInY">
+        <h1 class="text-nowrap h1-text mt-2">
+          Completed projects
+        </h1>
+        <div class="heading-line mb-5"></div>
+      </div>
+
+      <div class="container project-bg">
+        <div class="row">
+
+          <div class="col-md-6 col-xl-4 mb-3 mb-xl-4 col-12 wow slideInLeft">
+            <div class="card shadow-lg p-3">
+              <figure class="imghvr-shutter-in-vert">
+                <img src="images/recentProject/Myportfolio (2).png" class="img-fluid" alt="example-image">
+                <figcaption>
+                  <h3 class="ih-fade ih-delay-xs">My portfolio</h3>
+                  <p class="text-white">HTML CSS BOOTSTRAP5 JAVASCRIPT JQURY and other libraries</p>
+                  <p class="text-danger">- update v3.vuejs ( comming soon)</p>
+                  <p>click to view image</p>
+                </figcaption>
+                <a href="images/recentProject/Myportfolio (2).png" data-ratio="16x9" data-title="my portfolio website" data-gall="myGallery" class="my-venobox"></a>
+              </figure>
+              <div class="card-body">
+                <a href="https://github.com/heinwaiyanhtet/myPortfolio" target="_blank" class="btn btn-outline-primary">Get Source Code</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-6 col-xl-4 col-12 mb-3 mb-xl-4 wow slideInLeft">
+            <div class="card shadow-lg p-3">
+              <figure class="imghvr-flip-vert">
+                <img src="images/recentProject/portfolio.png" class="img-fluid" alt="example-image">
+                <figcaption>
+                  <h3 class="ih-fade ih-delay-xs">profile website</h3>
+                  <p class="text-white">HTML CSS BOOTSTRAP JAVASCRIPT JQEURY and other libraries</p>
+                  <p>click to view image</p>
+
+                </figcaption>
+                <a href="images/recentProject/portfolio.png" data-ratio="16x9" data-title="Profile Website" data-gall="myGallery" class="my-venobox"></a>
+              </figure>
+
+              <div class="card-body">
+                <a href="https://github.com/heinwaiyanhtet/profile" target="_blank" class="btn btn-outline-primary">Get Source Code</a>
+              </div>
+            </div>
+        </div>
+
+          <div class="col-md-6 col-xl-4 col-12 mb-3 mb-xl-4 wow slideInLeft">
+            <div class="card shadow-lg p-3">
+              <figure class="imghvr-flip-diag-1">
+                <img src="images/recentProject/exchange calc.png" class="img-fluid" alt="example-image">
+                <figcaption>
+                  <h3 class="ih-fade ih-delay-xs">Exchange Calculator</h3>
+                  <p class="text-white">
+                    HTML CSS PURE JAVASCRIPT
+                  </p>
+                  <p>click to view image</p>
+                  <!-- <a href="images/Web Developer_Monochromatic.svg"  data-ratio="16x9" data-title="Here your description" data-gall="myGallery" class="my-venobox">
+                    <img src="images/Web Developer_Monochromatic.svg" class="img-fluid" alt="">
+                  </a> -->
+
+                </figcaption>
+                <a href="images/recentProject/exchange calc.png" target="_blank" data-ratio="16x9" data-title="Exchange Calculator" data-gall="myGallery" class="my-venobox"></a>
+              </figure>
+
+              <div class="card-body">
+                <a href="https://github.com/heinwaiyanhtet/exchange-Calc" target="_blank" class="btn btn-outline-primary">Get Source Code</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-xl-4 col-12 mb-3 mb-xl-4 wow slideInRight ani-delay-2">
+            <div class="card shadow-lg p-3">
+              <figure class="imghvr-flip-diag-2">
+                <img src="images/recentProject/dashboard.png" class="img-fluid" alt="example-image">
+                <figcaption>
+                  <h3 class="ih-fade ih-delay-xs">Admin dashboard</h3>
+                  <p class="text-white">HTML CSS BOOTSTRAP JAVASCRIPT JQEURY and other libraries</p>
+                  <p>click to view image</p>
+                  <!-- <a href="images/Web Developer_Monochromatic.svg"  data-ratio="16x9" data-title="Here your description" data-gall="myGallery" class="my-venobox">
+                    <img src="images/Web Developer_Monochromatic.svg" class="img-fluid" alt="">
+                  </a> -->
+
+                </figcaption>
+                <a href="images/recentProject/dashboard.png" data-ratio="16x9" data-title="Admin Dashboard" data-gall="myGallery" class="my-venobox"></a>
+              </figure>
+
+              <div class="card-body">
+                <a href="https://github.com/heinwaiyanhtet/dashboard" target="_blank" class="btn btn-outline-primary">Get Source Code</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 col-xl-4 mb-3 mb-xl-4 col-12 wow slideInRight ani-delay-2">
+            <div class="card shadow-lg p-3">
+              <figure class="imghvr-shutter-out-diag-1">
+                <img src="images/recentProject/addToCart.png" class="img-fluid" alt="example-image">
+                <figcaption>
+                  <h3 class="ih-fade ih-delay-xs">Shopping List</h3>
+                  <p class="text-white">BOOTSTRAP & JQUERY</p>
+                  <!-- <a href="images/Web Developer_Monochromatic.svg"  data-ratio="16x9" data-title="Here your description" data-gall="myGallery" class="my-venobox">
+                    <img src="images/Web Developer_Monochromatic.svg" class="img-fluid" alt="">
+                  </a> -->
+                  <p>click to view image</p>
+                </figcaption>
+                <a href="images/recentProject/addToCart.png" data-ratio="16x9" data-title="Shopping List" data-gall="myGallery" class="my-venobox"></a>
+              </figure>
+
+              <div class="card-body">
+                <a href="https://github.com/heinwaiyanhtet/shopping-list" target="_blank" class="btn btn-outline-primary">Get Source Code</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 col-xl-4 mb-3 mb-xl-4 col-12 wow slideInRight ani-delay-2">
+            <div class="card shadow-lg p-3"  style="cursor:sw-resize">
+              <figure class="imghvr-shutter-out-diag-2">
+                <img src="images/recentProject/youtube.png" class="img-fluid" alt="example-image">
+                <figcaption>
+                  <h3 class="ih-fade ih-delay-xs">HTML Sass Bootstrap 5</h3>
+                  <p class="text-white">Truth be told , this is from youtube channel I've learned</p>
+                  <p>click to view image</p>
+                  <!-- <a href="images/Web Developer_Monochromatic.svg"  data-ratio="16x9" data-title="Here your description" data-gall="myGallery" class="my-venobox">
+                    <img src="images/Web Developer_Monochromatic.svg" class="img-fluid" alt="">
+                  </a> -->
+
+                </figcaption>
+                <a href="images/recentProject/youtube.png" data-ratio="16x9" data-title="Scss bootstrap5" data-gall="myGallery" class="my-venobox"></a>
+              </figure>
+
+              <div class="card-body">
+                <a href="https://github.com/heinwaiyanhtet/Scss-bootstrap-5" target="_blank" class="btn btn-outline-primary">Get Source Code</a>
+              </div>
+            </div>
+
+          </div>
+          
+      </div>
+
+
+      </div>
+</section>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7E76F910" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,112C384,75,480,53,576,74.7C672,96,768,160,864,170.7C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> -->
+
+
+<section id="skills" class="skills">
+
+ <div class="container">
+    <div class="row justify-content-center mb-3">
+      <div class="col-12 col-md-6 col-lg-6 col-xl-4 between">
+        <div class="card shadow-lg wow fadeInDownBig ani-delay-2">
+          <div class="card-body text-center">
+            <i class="fas fa-medal fa-2x"></i>
+              <h2 class="d-inline-block">Ui/Ux</h2>
+              <h6>front-end web developer</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+  <div class="text-center">
+    <h1 class="text-nowrap noPhotoHoverEffect wow flipInX">
+      MY Awesome SKILLS <img class="noPhoto" alt="" style="display: none; transition: all 0.5s ease-in-out;">
+    </h1>
+    <div class="heading-line mb-5"></div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-4 col-12 mb-4 wow rotateInDownLeft">
+        <img src="images/html.png" class="mt-3" alt="">
+         <h6 class="d-inline-block ms-3 fw-bolder">HTML</h6> 
+        <div class="progress mt-4">
+          <div class="bg-html progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 mb-4 wow rotateInDownLeft">
+        <img src="images/css-3.png" class="mt-3" alt="">
+          <h6 class="d-inline-block ms-3 fw-bolder">CSS</h6> 
+        <div class="progress mt-4">
+          <div class="bg-css progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 col-12 mb-4 wow rotateInDownLeft">
+        <img src="images/js-file.png" class="mt-3" alt="">
+        <h6 class="d-inline-block ms-3 fw-bolder">JAVASCRIPT</h6> 
+        <div class="progress mt-4">
+          <div class="bg-javascript progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 col-12 mb-4 wow rotateInDownRight">
+        <img src="images/jquery.png" class="mt-3" alt="">
+        <h6 class="d-inline-block ms-3 fw-bolder">Jquery</h6> 
+        <div class="progress mt-4">
+          <div class="bg-jquery progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 mb-4 wow rotateInDownRight">
+        <img src="images/vue.svg" class="mt-3" alt="">
+        <h6 class="d-inline-block ms-3 fw-bolder">Vue</h6> 
+        <div class="progress mt-4">
+          <div class="bg-vue progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 mb-4 wow rotateInDownRight">
+        <img src="images/experience.png" class="mt-3" alt="">
+        <h6 class="d-inline-block ms-3 fw-bolder">Adobe Xd</h6> 
+        <div class="progress mt-4">
+          <div class="bg-xd progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 mb-4 wow fadeInUpBig">
+        <img src="images/illustrator.png" class="mt-3" alt="">
+        <h6 class="d-inline-block ms-3 fw-bolder">Adobe Illustrator</h6> 
+        <div class="progress mt-4">
+          <div class="bg-Ai progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 mb-4 wow fadeInUpBig">
+        <img src="images/photoshop.png" class="mt-3" alt="">
+        <h6 class="d-inline-block ms-3 fw-bolder">Adobe photoshop 2021</h6>
+        <div class="progress mt-4">
+          <div class="bg-ps progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-12 mb-4 wow fadeInUpBig">
+        <img src="images/laravel.svg" class="mt-3" alt="">
+        <h6 class="d-inline-block ms-3 fw-bolder">Laravel (comming soon)</h6>
+        <div class="progress mt-4">
+          <div class="bg-laravel progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F3F4F5" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,112C384,75,480,53,576,74.7C672,96,768,160,864,170.7C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <div class="row testimonials-role">
+      
+      <div class="container">
+        <div class="col-lg-12 text-center">
+            <h2 class="text-center fw-bolder text-danger wow rotateIn">Testimonials</h2>
+            <div class="line mx-auto mb-3 mt-3"></div>
+            <h4 class="text-danger mb-5">What my clients are saying</h4>
+        </div>
+
+       <div class="testimonials-role__card single-item">
+      
+          <div class="col-lg-12">
+            <div class="card shadow bg-white mb-3 w-100 wow ">
+              <div class="card-body text-center">
+                <p class="lh-lg text-black">
+                    <i class="fas fa-quote-left"></i>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro illo tempora hic nulla nemo iste. Porro assumenda enim earum vero qui!
+                    <i class="fas fa-quote-right"></i>
+                    <div class="ratings p-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                </p>
+              </div>
+            </div>
+
+            
+           <div class="d-flex flex-column align-items-center testimonials__imageAndNamecontainer">
+              <div class="testimonials__picture">
+                  <img src="./images/client/client-1.jpg" class="img-fluid rounded-circle" alt="">
+              </div>
+
+              <div class="testimonials__name text-center">
+                <h3>Patrick Muriunigi</h3>
+                <p class="fw-light">CEO & founder</p>
+              </div>
+           </div>
+
+          </div>
+      
+          <div class="col-lg-12">
+            <div class="card shadow bg-white mb-3 w-100 wow ">
+              <div class="card-body text-center">
+                <p class="lh-lg text-black">
+                    <i class="fas fa-quote-left"></i>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro illo tempora hic nulla nemo iste. Porro assumenda enim earum vero qui!
+                    <i class="fas fa-quote-right"></i>
+                    <div class="ratings p-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                </p>
+              </div>
+            </div>
+
+            
+            <div class="d-flex flex-column align-items-center testimonials__imageAndNamecontainer">
+              <div class="testimonials__picture">
+                
+                  <img src="./images/client/client-2.jpg" class="img-fluid rounded-circle" alt="">
+               
+              </div>
+  
+              <div class="testimonials__name text-center">
+                <h3>Patrick Muriunigi</h3>
+                <p class="fw-light">CEO & founder</p>
+              </div>
+  
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="card shadow bg-white mb-3 w-100 wow ">
+              <div class="card-body text-center">
+                <p class="lh-lg text-black">
+                    <i class="fas fa-quote-left"></i>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro illo tempora hic nulla nemo iste. Porro assumenda enim earum vero qui!
+                    <i class="fas fa-quote-right"></i>
+                    <div class="ratings p-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                </p>
+              </div>
+            </div>
+
+            
+           <div class="d-flex flex-column align-items-center testimonials__imageAndNamecontainer">
+            <div class="testimonials__picture">
+             
+                <img src="./images/client/client-3.jpg" class="img-fluid rounded-circle" alt="">
+             
+            </div>
+
+            <div class="testimonials__name text-center">
+              <h3>Patrick Muriunigi</h3>
+              <p class="fw-light">CEO & founder</p>
+            </div>
+           </div>
+
+          </div>
+          
+          <div class="col-lg-12">
+            <div class="card shadow bg-white mb-3 w-100 wow ">
+              <div class="card-body text-center">
+                <p class="lh-lg text-black">
+                    <i class="fas fa-quote-left"></i>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro illo tempora hic nulla nemo iste. Porro assumenda enim earum vero qui!
+                    <i class="fas fa-quote-right"></i>
+                    <div class="ratings p-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                </p>
+              </div>
+            </div>
+
+            
+           <div class="d-flex flex-column align-items-center testimonials__imageAndNamecontainer">
+            <div class="testimonials__picture">
+              
+                <img src="./images/client/client-4.jpg" class="img-fluid rounded-circle" alt="">
+              
+            </div>
+
+            <div class="testimonials__name text-center">
+              <h3>Patrick Muriunigi</h3>
+              <p class="fw-light">CEO & founder</p>
+            </div>
+           </div>
+
+          </div>
+
+       </div>
+        
+      </div>
+    </div>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F3F4F5" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,112C384,75,480,53,576,74.7C672,96,768,160,864,170.7C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> -->
+</section>
+
+<section id="footer" class="footer">
+   <!-- <img src="./images/footer/Untitled-1.png" class="img-fluid footer__image" alt=""> -->
+   <div class="container">
+     <div class="row">
+        <h1 class="text-center mb-3 text-danger">GET IN TOUCH</h1>
+        <div class="heading-line mb-5"></div>
+
+        <div class="col-12 col-xl-6 wow bounceInLeft">
+            <div class="card mb-3 mb-xl-0" style="height: 300px;">
+              <div class="card-body">
+                  <h2 class="text-nowrap card-title">100% Satisfaction Guaranteed</h2>
+                   <p class="mt-1">
+                    Always available for freelancing if the right project comes along, Feel free to contact me.
+                   </p>
+
+                   <p>
+                    <i class="fas fa-phone-alt"></i>
+                      09953699002
+                   </p>
+                   <p>
+                    <i class="fas fa-envelope"></i>
+                    heinwaiyanhtet20042020@gmail.com
+                   </p>
+                   <p>
+                    <i class="fas fa-map-marked"></i>
+                      Myat Lay road,Saw Myo,gangaw district,Magwe division
+                   </p>
+                   
+              </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-6 wow bounceInRight">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14883.881589079812!2d94.14508582395669!3d21.153576336776307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30b4240901f4b1e1%3A0xd6b5d32f3c59afae!2z4YCG4YCx4YCsLCDhgJnhgLzhgJThgLrhgJnhgKw!5e0!3m2!1smy!2sin!4v1641271085110!5m2!1smy!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+     </div>
+   </div>
+</section>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/vendors/VenoBox-master/dist/venobox.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/slick-vendor/slick/slick.min.js"></script>
+    <script src="assets/vendors/cursor_animation/anime.min.js"></script>
+    <script src="assets/vendors/waypoints/src/waypoint.js"></script>
+    <script src="assets/vendors/WOW/dist/wow.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
